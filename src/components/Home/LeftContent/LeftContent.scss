@@ -1,0 +1,21 @@
+@import "../../../scss/config";
+.left-container {
+  width: 30%;
+  margin-left: 2rem;
+  &__top {
+    .title-left {
+      color: $orange;
+    }
+  }
+  &__bottom {
+    margin-top: 5rem;
+    .title-left {
+      color: $orange;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .left-container {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+$orange: #f1b722;
+$lightBlack: #0c2738;
+$darkBlack: #081b27;
+$transition: all 0.3s ease-in-out;
+$blue: #3898ec;
+$red: #dd4b39;
+
+@mixin flex($direction: row, $justify: unset, $align: unset) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin grid() {
+  display: grid;
+  place-items: center;
+}
+@mixin button($color: $red, $position: absolute) {
+  @include flex(row, center, center);
+  position: $position;
+  right: 1rem;
+  top: 0rem;
+  background-color: $color;
+  color: #fff;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  .icon {
+    margin: 0 0.5rem 0 0;
+  }
+}

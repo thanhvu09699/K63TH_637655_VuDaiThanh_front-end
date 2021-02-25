@@ -1,0 +1,39 @@
+@import "../../../scss/config";
+.films-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  &.column {
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    overflow: auto;
+    padding-top: 1.5rem;
+    .film-center {
+      @include flex(row);
+      margin: 0.5rem 0;
+      .img {
+        width: 35%;
+        margin-right: 0.5rem;
+        img {
+          height: auto;
+        }
+        .evaluate {
+          left: 30%;
+        }
+      }
+      &__details {
+        width: 65%;
+        .stars {
+          margin: 0;
+        }
+        .title {
+          white-space: normal;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+  }
+}
